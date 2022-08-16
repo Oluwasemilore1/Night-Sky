@@ -1,0 +1,183 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    background-color: #113755;
+    height: 21.87em;
+    width: 21.87em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.mountains{
+    height: 12.5em;
+    width: 7.5em;
+    background-color: #144569;
+    position: absolute;
+    left: 1.9em;
+    bottom: -0.62em;
+    transform: rotate(-50deg)
+}
+
+.mountains::before{
+    content: "";
+    position: absolute;
+    height: 5em;
+    width: 8.75em;
+    background-color: #144569;
+    left: 3.12em;
+    bottom: 1.25em;
+    transform: rotate(-90deg);
+}
+
+.mountains::after{
+    content: "";
+    position: absolute;
+    height: 6.25em;
+    width: 11em;
+    background-color: #144569;
+    left: 4.4em;
+    bottom: -6.7em;
+    transform: rotate(20deg);
+}
+
+.land{
+    height: 5em;
+    width: 28.12em;
+    background-color: #041524;
+    position: absolute;
+    bottom: -0.31em;
+    transform: rotate(5deg);
+}
+
+.moon{
+    height: 2.2em;
+    width: 2.2em;
+    background-color: #ffffff;
+    position: absolute;
+    left: 5.62em;
+    top: 4em;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.62em rgba(32, 105, 149, 0.6),
+    0 0 0 1.25em rgba(32, 105, 149, 0.6),
+    0 0 0 1.9em rgba(32, 105, 149, 0.4);
+}
+
+.moon::before{
+    content: "";
+    position: absolute;
+    background-color: #EBEFE7;
+    height: 0.62em;
+    width: 0.62em;
+    border-radius: 50%;
+    top: 0.5em;
+    left: 0.37em;
+}
+
+.moon::after{
+    content: "";
+    position: absolute;
+    height: 0.43em;
+    width: 0.43em;
+    background-color: #EBEFE7;
+    border-radius: 50%;
+    top: 1.25em;
+    left: 0.75em;
+}
+
+.windmill{
+    height: 0;
+    width: 1.25em;
+    border-bottom: 2.37em solid #041524;
+    border-left: 0.15em solid transparent;
+    border-right: 0.15em solid transparent;
+    position: absolute;
+    right: 12.5em;
+    bottom: 4.87em;
+}
+
+.windmill::after{
+    content: "";
+    position: absolute;
+    background-color: #041524;
+    height: 0.62em;
+    width: 1.25em;
+    bottom: -0.06em;
+    border-radius: 1.25rem 1.25em 0 0;
+}
+
+.windmill::before{
+    content: "";
+    position: absolute;
+    width: 1.25em;
+    height: 0;
+    border-bottom: 0.37em solid #0B2231;
+    border-left: 0.06em solid transparent;
+    border-right: 0.06em solid transparent;
+    position: absolute;
+    right: -0.2em;
+    top: 0.06em;
+}
+
+.light{
+    height: 0.25em;
+    width: 0.25em;
+    background-color: #8daf76;
+    position: absolute;
+    top: 0.75em;
+    left: 0.5em;
+    border-radius: 50%;
+    box-shadow: 0 0 0.06em 0.12em rgba(141, 175, 118, 0.3),
+    0 0 0.06em 0.25em rgba(141, 175, 118, 0.2);
+}
+
+.light::before{
+    content: "";
+    position: absolute;
+    background-color: #0f304f;
+    height: 0.5em;
+    width: 0.5em;
+    bottom: -1.25em;
+    left: -0.12em;
+    border-radius: 0.25em 0.25em 0 0;
+}
+
+.blades{
+    height: 3.75em;
+    width: 3.75em;
+    position: absolute;
+    bottom: -1.9em;
+    left: -1.25em;
+    animation: spin 5s infinite linear;
+}
+
+@keyframes spin {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.blades::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0.5em;
+    background-color: #041524;
+    left: 1.62em;
+}
+
+.blades::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0.5em;
+    background-color: #041524;
+    left: 1.62em;
+    transform: rotate(90deg);
+}
